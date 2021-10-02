@@ -20,12 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         money=(EditText) findViewById(R.id.money);
         convert=(Button) findViewById(R.id.convert);
-        convert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               amount=Double.parseDouble(money.getText().toString());
-                Toast.makeText(getApplicationContext(),String.valueOf(amount*2),Toast.LENGTH_LONG).show();
-            }
+        convert.setOnClickListener(view -> {
+           amount=Double.parseDouble(money.getText().toString());
+            Toast.makeText(getApplicationContext(),String.valueOf(amount*12),Toast.LENGTH_LONG).show();
         });
     }
 }
